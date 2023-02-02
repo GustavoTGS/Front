@@ -1,0 +1,22 @@
+class Main {
+  public static void main(String[] args) {
+    int num =5; int tamanho = 21; int i = 0;
+    int meio = 0;
+    int vetor [] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+    meio = tamanho/2;
+    while(i == 0){      
+      if(vetor[meio] == num){
+        System.out.println("elemento procurado no meio! Número: "+num+" pos "+vetor[meio+1]);
+         i = 1;   
+      } else if(num< vetor[meio]){
+        tamanho = tamanho/2;
+        meio = tamanho/2;
+        System.out.println("MENOR "+meio);
+      } else {
+        meio = meio + meio/2;
+        System.out.println("MAIOR "+meio);
+      }
+    }
+    System.out.println("FIM");
+  }
+}
